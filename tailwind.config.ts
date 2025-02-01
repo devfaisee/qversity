@@ -9,6 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        colors: {
+          'forest-green': '#228B22',
+          'lush-purple': '#9370DB',
+        },
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
