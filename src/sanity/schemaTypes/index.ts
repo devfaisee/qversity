@@ -1,7 +1,5 @@
-import { type SchemaTypeDefinition } from 'sanity'
+import { type SchemaTypeDefinition } from 'sanity';
 
-
-// Register it
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: schemaTypes
+  types: [] // Empty array if you have no schemas yet
 };
