@@ -1,5 +1,8 @@
 'use client';
 
+// In your main entry file, such as _app.js or _app.tsx
+import '../styles/styles.css';  // Adjust path according to your project structure
+
 import { FaShoppingCart, FaSearch } from 'react-icons/fa'; // Font Awesome icons
 import Image from 'next/image'; // Next.js Image component
 import { useState } from 'react';
