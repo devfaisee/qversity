@@ -24,7 +24,7 @@ const Navbar = () => {
           <Image src={logo} alt="Logo" width={40} height={40} className="rounded-lg bg-white bg-opacity-50 p-1 shadow-lg" />
           <h1 className="text-2xl font-bold text-gray-900 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">Qversity</h1>
         </div>
-        <div className="hidden lg:flex justify-center space-x-6 text-gray-900 font-semibold">
+        <div className="hidden lg:flex justify-center space-x-6 text-white font-semibold">
           <ul className="flex space-x-6">
             <li>
               <Link href="/shop" className="hover:text-yellow-300">Shop</Link>
