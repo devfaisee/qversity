@@ -22,18 +22,18 @@ const Navbar = () => {
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <div className="flex items-center space-x-4">
           <Image src={logo} alt="Logo" width={40} height={40} className="rounded-lg bg-white bg-opacity-50 p-1 shadow-lg" />
-          <h1 className="text-2xl font-bold text-gray-900 bg-gradient-to-r from-lust-purple  via-forest-green to-red-500 bg-clip-text text-transparent">Qversity</h1>
+          <h1 className="text-2xl font-bold text-gray-900 bg-gradient-to-r from-lust-purple via-forest-green to-red-500 bg-clip-text text-transparent">Qversity</h1>
         </div>
         <div className="hidden lg:flex justify-center space-x-6 text-white font-semibold">
           <ul className="flex space-x-6">
             <li>
-              <Link href="/shop" className="hover:text-purple-300">Shop</Link>
+              <Link href="/shop" className="menu-item hover:text-purple-300">Shop</Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-purple-300">About</Link>
+              <Link href="/about" className="menu-item hover:text-purple-300">About</Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-purple-300">Contact</Link>
+              <Link href="/contact" className="menu-item hover:text-purple-300">Contact</Link>
             </li>
           </ul>
         </div>
