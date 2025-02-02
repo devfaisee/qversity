@@ -18,22 +18,22 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-md shadow-xl p-4 rounded-b-lg border-b border-white/50 z-50 h-auto lg:h-20 text-gray-900 animate-fade-in">
+    <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-md shadow-xl p-4 rounded-b-lg border-b border-white/50 z-50 h-auto lg:h-20 text-white animate-fade-in">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <div className="flex items-center space-x-4">
           <Image src={logo} alt="Logo" width={40} height={40} className="rounded-lg bg-white bg-opacity-50 p-1 shadow-lg" />
-          <h1 className="text-2xl font-bold text-gray-900 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">Qversity</h1>
+          <h1 className="text-2xl font-bold text-gray-900 bg-gradient-to-r from-lust-purple  via-forest-green to-red-500 bg-clip-text text-transparent">Qversity</h1>
         </div>
         <div className="hidden lg:flex justify-center space-x-6 text-white font-semibold">
           <ul className="flex space-x-6">
             <li>
-              <Link href="/shop" className="hover:text-yellow-300">Shop</Link>
+              <Link href="/shop" className="hover:text-purple-300">Shop</Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-yellow-300">About</Link>
+              <Link href="/about" className="hover:text-purple-300">About</Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-yellow-300">Contact</Link>
+              <Link href="/contact" className="hover:text-purple-300">Contact</Link>
             </li>
           </ul>
         </div>
