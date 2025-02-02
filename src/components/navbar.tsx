@@ -35,13 +35,19 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-center space-x-6 text-gray-900 font-semibold">
           <ul className="flex space-x-6">
             <li>
-              <Link href="/shop" className="hover:text-yellow-300">Shop</Link>
+              <Link href="/shop" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+                Shop
+              </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-yellow-300">About</Link>
+              <Link href="/about" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-yellow-300">Contact</Link>
+              <Link href="/contact" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -58,24 +64,24 @@ const Navbar = () => {
               <FaSearch />
             </button>
           </form>
-          <FaShoppingCart className="text-gray-900 text-2xl hover:text-yellow-300" />
+          <FaShoppingCart className="text-teal-900 text-2xl hover:text-yellow-300" />
         </div>
       </div>
 
       {/* Mobile Navigation Links (Visible in Small Screens) */}
       <ul className="lg:hidden flex flex-wrap justify-center space-x-6 text-gray-900 text-lg pb-2 mt-2">
         <li>
-          <Link href="/shop" className="hover:text-yellow-300">
+          <Link href="/shop" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
             Shop
           </Link>
         </li>
         <li>
-          <Link href="/about" className="hover:text-yellow-300">
+          <Link href="/about" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
             About
           </Link>
         </li>
         <li>
-          <Link href="/contact" className="hover:text-yellow-300">
+          <Link href="/contact" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
             Contact
           </Link>
         </li>
