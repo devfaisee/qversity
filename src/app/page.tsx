@@ -1,13 +1,21 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Home() {
   return (
-    <section
-      className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
-      style={{
-        backgroundImage: 'url("https://images.pexels.com/photos/8188880/pexels-photo-8188880.jpeg")',
-      }}
-    >
+    <section className="relative w-full h-screen flex items-center justify-center">
+      {/* Background image using Next.js Image component */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.pexels.com/photos/8188880/pexels-photo-8188880.jpeg"
+          alt="Stylish Shoes"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+      </div>
+      
       <div className="absolute inset-0 bg-black opacity-40"></div> {/* Overlay for better text visibility */}
       <div className="text-center z-10 text-white">
         <h1 className="text-4xl sm:text-6xl font-bold mb-4">Welcome to Qversity</h1>
