@@ -28,34 +28,34 @@ const Navbar = () => {
             height={40}
             className="rounded-lg bg-white bg-opacity-50 p-1 shadow-lg"
           />
-          <h1 className="text-2xl font-bold text-black text-shadow-lg">
+          <h1 className="text-2xl font-bold text-teal-900 text-shadow-lg">
             Qversity
           </h1>
         </div>
-        <div className="hidden lg:flex justify-center space-x-6 text-gray-900 font-semibold">
+        <div className="hidden lg:flex justify-center space-x-6 font-semibold">
           <ul className="flex space-x-6">
             <li>
-              <Link href="/shop" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+              <Link href="/shop" className="text-teal-900 hover:text-teal-700 hover:font-semibold">
                 Shop
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+              <Link href="/about" className="text-teal-900 hover:text-teal-700 hover:font-semibold">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+              <Link href="/contact" className="text-teal-900 hover:text-teal-700 hover:font-semibold">
                 Contact
               </Link>
             </li>
           </ul>
         </div>
         <div className="flex justify-end items-center space-x-4 w-full lg:w-auto mt-4 lg:mt-0">
-          <form onSubmit={handleSearch} className="flex items-center bg-white bg-opacity-60 text-gray-700 rounded-md px-2 py-2 w-full lg:w-64">
+          <form onSubmit={handleSearch} className="flex items-center bg-white bg-opacity-60 text-teal-900 rounded-md px-2 py-2 w-full lg:w-64">
             <input
               type="text"
-              className="w-full px-3 py-1 focus:outline-none"
+              className="w-full px-3 py-1 focus:outline-none text-teal-900"
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -69,19 +69,19 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation Links (Visible in Small Screens) */}
-      <ul className="lg:hidden flex flex-wrap justify-center space-x-6 text-gray-900 text-lg pb-2 mt-2">
+      <ul className="lg:hidden flex flex-wrap justify-center space-x-6 text-teal-900 text-lg pb-2 mt-2">
         <li>
-          <Link href="/shop" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+          <Link href="/shop" className="text-teal-900 hover:text-teal-700 hover:font-semibold">
             Shop
           </Link>
         </li>
         <li>
-          <Link href="/about" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+          <Link href="/about" className="text-teal-900 hover:text-teal-700 hover:font-semibold">
             About
           </Link>
         </li>
         <li>
-          <Link href="/contact" className="hover:text-yellow-300 text-teal-900 hover:text-teal-700">
+          <Link href="/contact" className="text-teal-900 hover:text-teal-700 hover:font-semibold">
             Contact
           </Link>
         </li>
