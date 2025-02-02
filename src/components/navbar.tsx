@@ -28,7 +28,7 @@ const Navbar = () => {
             height={40}
             className="rounded-lg bg-white bg-opacity-50 p-1 shadow-lg"
           />
-          <h1 className="text-2xl font-bold text-gray-900 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl font-bold text-black text-shadow-lg">
             Qversity
           </h1>
         </div>
