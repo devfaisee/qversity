@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <div className="mt-48 lg:mt-32"> </div>{/* Adjust based on the height of the navbar */}
+      {/*  <div className="mt-48 lg:mt-32"> </div> Adjust based on the height of the navbar */}
       
         {children}
       </body>

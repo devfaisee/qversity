@@ -5,7 +5,7 @@ import Image from 'next/image'; // Next.js Image component
 import { useState } from 'react';
 import logo from '../../public/qversity_logo.png'; // Import logo image
 import Link from 'next/link';
-
+import styles from '@/styles/navbarStyles.module.css';
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-teal-100 to-teal-500 backdrop-blur-md shadow-xl p-4 rounded-b-lg border-b border-white/50 z-50 h-auto lg:h-20 text-gray-900 animate-fade-in">
+    <nav  className={`${styles.navbar} fixed top-0 left-0 w-full bg-gradient-to-r from-teal-100 to-teal-500 backdrop-blur-md shadow-xl p-4 rounded-b-lg border-b border-white/50 z-50 h-auto lg:h-20 text-gray-900 animate-fade-in`}>
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <div className="flex items-center space-x-4">
           <Image
