@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -19,22 +18,50 @@ export default function Home() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
-        {/* Hero Text */}
-        <div className="text-center z-10 text-white">
-          <h1 className="text-4xl sm:text-6xl font-bold mb-4 animate-fade-in">Welcome to Qversity</h1>
-          <p className="text-lg sm:text-2xl mb-8 animate-fade-in">Your One-Stop Shop for Rental Cars</p>
+        {/* Hero Content */}
+        <div className="text-center z-10 text-white px-4">
+          <h1 className="text-4xl sm:text-6xl font-bold mb-4 animate-fade-in">
+            Welcome to Qversity
+          </h1>
+          <p className="text-lg sm:text-2xl mb-8 animate-fade-in">
+            Your One-Stop Shop for Luxury & Budget-Friendly Car Rentals
+          </p>
 
-          {/* Booking/Search Form */}
+          {/* Booking Form */}
           <form className="bg-white p-6 rounded-lg shadow-lg flex flex-wrap gap-4 justify-center w-full max-w-3xl animate-fade-in">
-            <input type="date" className="p-3 border border-gray-300 rounded-md w-full sm:w-1/3 focus:outline-none focus:ring-2 focus:ring-secondary transition duration-300 text-gray-700" placeholder="Pickup Date" />
-            <input type="date" className="p-3 border border-gray-300 rounded-md w-full sm:w-1/3 focus:outline-none focus:ring-2 focus:ring-secondary transition duration-300 text-gray-700" placeholder="Return Date" />
-            <select className="p-3 border border-gray-300 rounded-md w-full sm:w-1/3 focus:outline-none focus:ring-2 focus:ring-secondary transition duration-300 text-gray-700 bg-white">
-              <option className="text-gray-700">All Car Types</option>
-              <option className="text-gray-700">SUV</option>
-              <option className="text-gray-700">Sedan</option>
-              <option className="text-gray-700">Luxury</option>
-            </select>
-            <button className="bg-secondary text-white px-6 py-3 rounded-lg hover:bg-accent transition duration-300 w-full sm:w-auto">
+            {/* Pickup Date */}
+            <div className="w-full sm:w-1/3">
+              <label className="block text-gray-700 font-medium mb-2">Pickup Date</label>
+              <input
+                type="date"
+                className="p-3 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-primary transition duration-300 text-gray-700"
+                placeholder="Select Pickup Date"
+              />
+            </div>
+
+            {/* Return Date */}
+            <div className="w-full sm:w-1/3">
+              <label className="block text-gray-700 font-medium mb-2">Return Date</label>
+              <input
+                type="date"
+                className="p-3 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-primary transition duration-300 text-gray-700"
+                placeholder="Select Return Date"
+              />
+            </div>
+
+            {/* Car Type Selector */}
+            <div className="w-full sm:w-1/3">
+              <label className="block text-gray-700 font-medium mb-2">Car Type</label>
+              <select className="p-3 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-primary transition duration-300 text-gray-700 bg-white">
+                <option className="text-gray-700">All Car Types</option>
+                <option className="text-gray-700">SUV</option>
+                <option className="text-gray-700">Sedan</option>
+                <option className="text-gray-700">Luxury</option>
+              </select>
+            </div>
+
+            {/* Search Button */}
+            <button className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-accent transition duration-300 w-full sm:w-auto">
               Find a Car
             </button>
           </form>
