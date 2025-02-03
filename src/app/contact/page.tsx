@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-6">
-      <div className="bg-[#F8FAFC] shadow-lg rounded-lg p-8 max-w-lg w-full text-center">
+      <div className="bg-[#F8FAFC] shadow-lg rounded-lg p-8 max-w-lg w-full text-center mt-16 sm:mt-0">
         <h1 className="text-3xl font-bold text-[#0F172A] mb-4">Contact Us</h1>
         <p className="text-[#475569] mb-6">
           We would love to hear from you! Feel free to reach out to us for any inquiries.
