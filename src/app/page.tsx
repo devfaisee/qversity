@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <>
+
       <section className="relative w-full h-screen flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0">
