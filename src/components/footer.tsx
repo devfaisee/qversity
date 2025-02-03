@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10">
@@ -10,9 +13,9 @@ const Footer = () => {
             Your trusted car rental partner. Affordable rates, seamless bookings, and premium service.
           </p>
           <div className="flex space-x-3 mt-4">
-            <img src="/icons/visa.svg" alt="Visa" className="h-6" />
-            <img src="/icons/mastercard.svg" alt="Mastercard" className="h-6" />
-            <img src="/icons/paypal.svg" alt="PayPal" className="h-6" />
+            <Image src="/icons/visa.svg" alt="Visa" width={40} height={25} />
+            <Image src="/icons/mastercard.svg" alt="Mastercard" width={40} height={25} />
+            <Image src="/icons/paypal.svg" alt="PayPal" width={40} height={25} />
           </div>
         </div>
 
@@ -20,11 +23,11 @@ const Footer = () => {
         <div>
           <h3 className="text-white font-semibold">Quick Links</h3>
           <ul className="mt-2 space-y-2">
-            <li><a href="/" className="hover:text-white">Home</a></li>
-            <li><a href="/cars" className="hover:text-white">Browse Cars</a></li>
-            <li><a href="/locations" className="hover:text-white">Our Locations</a></li>
-            <li><a href="/deals" className="hover:text-white">Deals & Discounts</a></li>
-            <li><a href="/about" className="hover:text-white">About Us</a></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/cars">Browse Cars</Link></li>
+            <li><Link href="/locations">Our Locations</Link></li>
+            <li><Link href="/deals">Deals & Discounts</Link></li>
+            <li><Link href="/about">About Us</Link></li>
           </ul>
         </div>
 
@@ -32,10 +35,10 @@ const Footer = () => {
         <div>
           <h3 className="text-white font-semibold">Customer Support</h3>
           <ul className="mt-2 space-y-2">
-            <li><a href="/contact" className="hover:text-white">Contact Us</a></li>
-            <li><a href="/faqs" className="hover:text-white">FAQs</a></li>
-            <li><a href="/terms" className="hover:text-white">Terms & Conditions</a></li>
-            <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li>
+            <li><Link href="/contact">Contact Us</Link></li>
+            <li><Link href="/faqs">FAQs</Link></li>
+            <li><Link href="/terms">Terms & Conditions</Link></li>
+            <li><Link href="/privacy">Privacy Policy</Link></li>
           </ul>
         </div>
 
@@ -54,9 +57,9 @@ const Footer = () => {
             </button>
           </div>
           <div className="flex space-x-4 mt-4">
-            <a href="#"><img src="/icons/facebook.svg" className="h-6" /></a>
-            <a href="#"><img src="/icons/twitter.svg" className="h-6" /></a>
-            <a href="#"><img src="/icons/instagram.svg" className="h-6" /></a>
+            <Link href="#"><Image src="/icons/facebook.svg" alt="Facebook" width={24} height={24} /></Link>
+            <Link href="#"><Image src="/icons/twitter.svg" alt="Twitter" width={24} height={24} /></Link>
+            <Link href="#"><Image src="/icons/instagram.svg" alt="Instagram" width={24} height={24} /></Link>
           </div>
         </div>
 
