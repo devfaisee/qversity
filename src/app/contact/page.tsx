@@ -1,5 +1,52 @@
 export default function Contact() {
-    return (
-   <h1 className="h-screen p-4">Contact Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla totam, inventore qui dolorem ratione adipisci animi accusantium iusto reiciendis blanditiis quis, accusamus tempore quo nostrum, molestias placeat ex. Ipsa unde illo possimus repudiandae eveniet maxime et quidem vel magnam itaque soluta temporibus, voluptas voluptate nesciunt quaerat laboriosam tempore officia nemo eligendi dolore sit ex molestiae? Nihil, sit magni, non vitae molestiae odit dolorum commodi recusandae aliquam excepturi dolore maxime optio a dolores magnam dignissimos obcaecati porro quidem accusantium quae nisi fuga! Magnam ea doloremque eveniet culpa quis atque reiciendis molestias expedita. Ad voluptatum totam eligendi perspiciatis delectus distinctio impedit. Iusto similique ullam dolorum reprehenderit hic vero exercitationem dolorem, eaque ratione, culpa fuga libero, odit aut labore ex repellat enim suscipit cupiditate tempore quibusdam minima! Architecto nulla exercitationem libero molestiae perferendis neque vel omnis reprehenderit vitae ab, fuga sequi sint iusto at facilis cum, necessitatibus voluptates quia quaerat rem est debitis. Facere molestiae in vitae nihil inventore? Provident eaque pariatur, aliquam, temporibus dolore alias, dicta excepturi libero ea error cum placeat facere quibusdam adipisci ullam quis hic minus sapiente! Perferendis adipisci sequi a quidem consectetur delectus animi, dolore illo, rem nemo vero? Optio at commodi enim molestias, quo, corporis nulla nemo obcaecati excepturi distinctio eius dicta quas hic. Facere commodi esse voluptatem culpa, fugit voluptatibus dicta corrupti est hic ullam sapiente animi debitis nihil quia doloribus iure aliquam corporis? Recusandae autem quidem repellendus quisquam tenetur porro sit deleniti dolorem consequuntur sunt labore fugit temporibus accusantium necessitatibus, tempore iusto placeat minus vero eligendi voluptatem totam quam maxime ducimus. Deleniti, dolorum fugiat! Vel aliquid laboriosam, dicta ut nihil unde assumenda ea officia, laborum dolorem magnam. Corporis rerum similique obcaecati blanditiis, corrupti veniam magni magnam perferendis maxime. Deserunt soluta aliquam quae quod id cupiditate atque pariatur, impedit dolor voluptatum iure totam nulla fuga rem animi earum dicta eum alias voluptates! Commodi quis eveniet reiciendis molestiae quisquam maiores corporis mollitia labore aut facilis obcaecati ipsam vero harum hic illum, itaque nam quas veniam rerum libero vitae ullam laborum. Nemo quia explicabo incidunt vero placeat aliquam illum eius dolorum, reprehenderit modi voluptas accusantium saepe nihil quidem, accusamus possimus suscipit eos ipsa voluptatibus! Perspiciatis harum reprehenderit ullam eveniet? Debitis perspiciatis architecto modi repudiandae magni magnam ea voluptatem dolor officiis distinctio dolore dicta, ipsa, nemo ut, excepturi cum blanditiis! Similique nesciunt rerum eum, voluptatibus culpa ad praesentium maxime molestias cumque quaerat dolore neque mollitia dicta id placeat vitae voluptatem architecto veniam ex tenetur dolorem, consectetur eveniet eligendi. Quia aliquam atque excepturi dolor nemo ex placeat, illum harum quisquam doloremque ducimus deserunt assumenda, sunt iusto! Officiis iure obcaecati assumenda voluptates quae! Dolor, sunt fugit eos, delectus accusantium cumque cum mollitia fugiat soluta enim iusto consequatur natus praesentium reprehenderit quaerat ad aliquid cupiditate porro recusandae a! Dicta perferendis reiciendis neque quia minus enim ex. Repellat, quasi eius dolor delectus doloribus autem atque repellendus accusantium! Fugit doloremque architecto quis minus temporibus expedita, consectetur veritatis commodi repellat nobis, et facilis voluptatum perferendis dolore corporis sint sit ipsam. Modi sequi recusandae aliquam voluptas.</h1>
-    );
-  }
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#1E293B] to-[#0F172A] flex flex-col items-center justify-center p-6">
+      {/* Hero Section */}
+      <div className="text-center text-white mb-10">
+        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          Get in Touch with Qversity
+        </h1>
+        <p className="mt-2 text-lg text-gray-300">We'd love to hear from you! Let's talk.</p>
+      </div>
+
+      {/* Contact Form Card */}
+      <div className="w-full max-w-2xl bg-[#1E293B] shadow-2xl rounded-xl p-6 sm:p-8 border border-gray-700">
+        <form className="space-y-6">
+          <div>
+            <label className="block text-gray-300 font-medium">Your Name</label>
+            <input type="text" className="w-full mt-1 px-4 py-3 bg-gray-800 text-white rounded-lg shadow-md border border-gray-600 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="John Doe" />
+          </div>
+
+          <div>
+            <label className="block text-gray-300 font-medium">Email Address</label>
+            <input type="email" className="w-full mt-1 px-4 py-3 bg-gray-800 text-white rounded-lg shadow-md border border-gray-600 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="you@example.com" />
+          </div>
+
+          <div>
+            <label className="block text-gray-300 font-medium">Message</label>
+            <textarea rows={4} className="w-full mt-1 px-4 py-3 bg-gray-800 text-white rounded-lg shadow-md border border-gray-600 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="How can we help you?"></textarea>
+          </div>
+
+          <button className="w-full py-3 px-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-lg shadow-lg hover:scale-105 transition-transform">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      {/* Contact Info */}
+      <div className="mt-10 text-gray-300">
+        <p className="text-lg"><strong>Email:</strong> contact@qversity.com</p>
+        <p className="text-lg"><strong>Phone:</strong> +92 123 456 7890</p>
+        <p className="text-lg"><strong>Location:</strong> Karachi, Pakistan</p>
+      </div>
+
+      {/* CTA */}
+      <div className="mt-10">
+        <p className="text-lg text-gray-300">Need urgent support? Reach out via email!</p>
+        <a href="mailto:contact@qversity.com" className="mt-2 inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600 transition">
+          Email Us
+        </a>
+      </div>
+    </div>
+  );
+}
