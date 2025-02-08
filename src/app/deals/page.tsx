@@ -1,6 +1,8 @@
-'use client';
 import { useState } from "react";
 import { FaSearch, FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import Image from "next/image";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Shop = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -39,6 +41,24 @@ const Shop = () => {
     },
   ];
 
+  const promotions = [
+    {
+      id: 1,
+      image: "/images/promotion1.jpg",
+      link: "/seasonal-promo",
+    },
+    {
+      id: 2,
+      image: "/images/promotion2.jpg",
+      link: "/seasonal-promo",
+    },
+    {
+      id: 3,
+      image: "/images/promotion3.jpg",
+      link: "/seasonal-promo",
+    },
+  ];
+
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
   };
@@ -65,10 +85,42 @@ const Shop = () => {
     }
   });
 
+  const responsive = {
+    largeDesktop: {
+      breakpoint: { max: 4000, min: 1200 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 1200, min: 992 },
+      items: 2,
+    },
+    tablet: {
+      breakpoint: { max: 992, min: 768 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 768, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
-    <div className="bg-[#F8F9FA] text-[#212529] py-16 px-6 mt-48 sm:mt-20">
+    <div className="bg-[#F8F9FA] text-[#212529] py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-semibold text-center mb-8">Shop</h2>
+        
+        {/* Promotion Slider */}
+        <div className="mb-8">
+          <Carousel responsive={responsive} ssr infinite autoPlay autoPlaySpeed={3000}>
+            {promotions.map((promo) => (
+              <a key={promo.id} href={promo.link}>
+                <Image src={promo.image} alt={`Promotion ${promo.id}`} className="w-full rounded-lg" width={4000} height={2250} objectFit="cover" />
+              </a>
+            ))}
+          </Carousel>
+        </div>
+        
+        {/* Search Bar */}
         <div className="mb-8 relative bg-white shadow-md rounded-lg p-6 flex items-center space-x-4">
           <input
             type="text"
@@ -80,6 +132,7 @@ const Shop = () => {
           <FaSearch className="text-[#6C757D]" />
         </div>
 
+        {/* Category Filters and Sort Options */}
         <div className="mb-8 flex justify-between items-center">
           <div className="flex space-x-4">
             {categories.map((category, index) => (
@@ -111,6 +164,7 @@ const Shop = () => {
           </div>
         </div>
 
+        {/* Product Listings */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedProducts
             .filter(

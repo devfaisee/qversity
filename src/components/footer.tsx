@@ -13,9 +13,9 @@ const Footer = () => {
             Your trusted car rental partner. Affordable rates, seamless bookings, and premium service.
           </p>
           <div className="flex space-x-3 mt-4">
-            <Image src="/icons/visa.svg" alt="Visa" width={40} height={25} />
-            <Image src="/icons/mastercard.svg" alt="Mastercard" width={40} height={25} />
-            <Image src="/icons/paypal.svg" alt="PayPal" width={40} height={25} />
+            <Image src="/social/visa.png" alt="Visa" width={40} height={25} />
+            <Image src="/social/master.png" alt="Mastercard" width={40} height={25} />
+            <Image src="/social/paypal.png" alt="PayPal" width={40} height={25} />
           </div>
         </div>
 
@@ -24,8 +24,8 @@ const Footer = () => {
           <h3 className="text-white font-semibold">Quick Links</h3>
           <ul className="mt-2 space-y-2">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/cars">Browse Cars</Link></li>
-            <li><Link href="/locations">Our Locations</Link></li>
+            <li><Link href="/shop">Browse Cars</Link></li>
+            <li><Link href="/location">Our Locations</Link></li>
             <li><Link href="/deals">Deals & Discounts</Link></li>
             <li><Link href="/about">About Us</Link></li>
           </ul>
@@ -36,9 +36,9 @@ const Footer = () => {
           <h3 className="text-white font-semibold">Customer Support</h3>
           <ul className="mt-2 space-y-2">
             <li><Link href="/contact">Contact Us</Link></li>
-            <li><Link href="/faqs">FAQs</Link></li>
+            <li><Link href="/faq">FAQs</Link></li>
             <li><Link href="/terms">Terms & Conditions</Link></li>
-            <li><Link href="/privacy">Privacy Policy</Link></li>
+            <li><Link href="/policy">Privacy Policy</Link></li>
           </ul>
         </div>
 
@@ -57,9 +57,11 @@ const Footer = () => {
             </button>
           </div>
           <div className="flex space-x-4 mt-4">
-            <Link href="#"><Image src="/icons/facebook.svg" alt="Facebook" width={24} height={24} /></Link>
-            <Link href="#"><Image src="/icons/twitter.svg" alt="Twitter" width={24} height={24} /></Link>
-            <Link href="#"><Image src="/icons/instagram.svg" alt="Instagram" width={24} height={24} /></Link>
+            <Link href="#"><Image src="/social/fb.png" alt="Facebook" width={30} height={24} /></Link>
+            <Link href="#"><Image src="/social/x.png" alt="Twitter" width={24} height={24} /></Link>
+            <Link href="#"><Image src="/social/insta.png" alt="Instagram" width={24} height={24} /></Link>
+            <Link href="#"><Image src="/social/linkedin.png" alt="Linkedin" width={24} height={24} /></Link>
+         
           </div>
         </div>
 
