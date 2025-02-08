@@ -1,149 +1,60 @@
 'use client';
-import { useState } from "react";
-import { FaSearch, FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import Image from "next/image";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 
-const Shop = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortOption, setSortOption] = useState("default");
+import { useState } from 'react';
+import Image from 'next/image';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
-  const categories = ["All", "Economy", "Luxury", "SUVs", "Sedans"];
-  const products = [
-    {
-      id: 1,
-      name: "Economy Car",
-      category: "Economy",
-      price: 20,
-      image: "/images/economy-car.jpg",
-    },
-    {
-      id: 2,
-      name: "Luxury Car",
-      category: "Luxury",
-      price: 50,
-      image: "/images/luxury-car.jpg",
-    },
-    {
-      id: 3,
-      name: "SUV",
-      category: "SUVs",
-      price: 40,
-      image: "/images/suv.jpg",
-    },
-    {
-      id: 4,
-      name: "Sedan",
-      category: "Sedans",
-      price: 30,
-      image: "/images/sedan.jpg",
-    },
+const Deals = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortOption, setSortOption] = useState('default');
+
+  const categories = ['All', 'Economy', 'Luxury', 'SUVs', 'Sedans'];
+  const deals = [
+    { id: 1, name: 'Economy Deal', category: 'Economy', price: 18, image: '/images/economy-deal.jpg' },
+    { id: 2, name: 'Luxury Deal', category: 'Luxury', price: 45, image: '/images/luxury-deal.jpg' },
+    { id: 3, name: 'SUV Deal', category: 'SUVs', price: 35, image: '/images/suv-deal.jpg' },
+    { id: 4, name: 'Sedan Deal', category: 'Sedans', price: 28, image: '/images/sedan-deal.jpg' },
   ];
 
   const promotions = [
-    {
-      id: 1,
-      image: "/images/promotion1.jpg",
-      link: "/seasonal-promo",
-    },
-    {
-      id: 2,
-      image: "/images/promotion2.jpg",
-      link: "/seasonal-promo",
-    },
-    {
-      id: 3,
-      image: "/images/promotion3.jpg",
-      link: "/seasonal-promo",
-    },
+    { id: 1, image: '/images/deal1.jpg', link: '/promo' },
+    { id: 2, image: '/images/deal2.jpg', link: '/promo' },
   ];
 
-  const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category);
-  };
+  const handleCategoryChange = (category) => setSelectedCategory(category);
+  const handleSortChange = (e) => setSortOption(e.target.value);
 
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
-  };
-
-  const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSortOption(event.target.value);
-  };
-
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  const sortedProducts = filteredProducts.sort((a, b) => {
-    if (sortOption === "price-asc") {
-      return a.price - b.price;
-    } else if (sortOption === "price-desc") {
-      return b.price - a.price;
-    } else {
-      return 0;
-    }
-  });
+  const filteredDeals = deals.filter((deal) => selectedCategory === 'All' || deal.category === selectedCategory);
+  const sortedDeals = filteredDeals.sort((a, b) => (sortOption === 'price-asc' ? a.price - b.price : b.price - a.price));
 
   const responsive = {
-    largeDesktop: {
-      breakpoint: { max: 4000, min: 1200 },
-      items: 3,
-    },
-    desktop: {
-      breakpoint: { max: 1200, min: 992 },
-      items: 2,
-    },
-    tablet: {
-      breakpoint: { max: 992, min: 768 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 768, min: 0 },
-      items: 1,
-    },
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 2 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
   };
 
   return (
-    <div className="bg-[#F8F9FA] text-[#212529] py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-semibold text-center mb-8">Shop</h2>
-        
-        {/* Promotion Slider */}
-        <div className="mb-8">
-          <Carousel responsive={responsive} ssr infinite autoPlay autoPlaySpeed={3000}>
+    <div className='bg-[#F8F9FA] text-[#212529] py-16 px-6'>
+      <div className='max-w-6xl mx-auto'>
+        <h2 className='text-4xl font-semibold text-center mb-8'>Best Car Rental Deals</h2>
+
+        <div className='mb-8'>
+          <Carousel responsive={responsive} infinite autoPlay autoPlaySpeed={3000}>
             {promotions.map((promo) => (
               <a key={promo.id} href={promo.link}>
-                <Image src={promo.image} alt={`Promotion ${promo.id}`} className="w-full rounded-lg" width={4000} height={2250} objectFit="cover" />
+                <Image src={promo.image} alt='Deal Promotion' width={4000} height={2250} className='w-full rounded-lg' />
               </a>
             ))}
           </Carousel>
         </div>
-        
-        {/* Search Bar */}
-        <div className="mb-8 relative bg-white shadow-md rounded-lg p-6 flex items-center space-x-4">
-          <input
-            type="text"
-            placeholder="Search for cars..."
-            className="w-full p-3 rounded-lg border border-[#6C757D] focus:outline-none"
-            value={searchQuery}
-            onChange={handleSearch}
-          />
-          <FaSearch className="text-[#6C757D]" />
-        </div>
 
-        {/* Category Filters and Sort Options */}
-        <div className="mb-8 flex justify-between items-center">
-          <div className="flex space-x-4">
+        <div className='flex justify-between mb-6'>
+          <div className='flex space-x-4'>
             {categories.map((category, index) => (
               <button
                 key={index}
-                className={`px-4 py-2 rounded-lg ${
-                  selectedCategory === category
-                    ? "bg-[#004AAD] text-white"
-                    : "bg-white text-[#212529]"
-                } hover:bg-[#F1F3F5] transition`}
+                className={`px-4 py-2 rounded-lg ${selectedCategory === category ? 'bg-[#004AAD] text-white' : 'bg-white text-[#212529]'} hover:bg-[#F1F3F5] transition`}
                 onClick={() => handleCategoryChange(category)}
               >
                 {category}
@@ -151,41 +62,32 @@ const Shop = () => {
             ))}
           </div>
 
-          <div>
-            <label className="mr-2 text-[#6C757D]">Sort by:</label>
-            <select
-              className="px-4 py-2 rounded-lg border border-[#6C757D] focus:outline-none"
-              value={sortOption}
-              onChange={handleSortChange}
-            >
-              <option value="default">Default</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-            </select>
-          </div>
+          <select
+            className='px-4 py-2 rounded-lg border border-[#6C757D] focus:outline-none'
+            value={sortOption}
+            onChange={handleSortChange}
+          >
+            <option value='default'>Default</option>
+            <option value='price-asc'>Price: Low to High</option>
+            <option value='price-desc'>Price: High to Low</option>
+          </select>
         </div>
 
-        {/* Product Listings */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedProducts
-            .filter(
-              (product) =>
-                selectedCategory === "All" || product.category === selectedCategory
-            )
-            .map((product) => (
-              <div key={product.id} className="bg-white shadow-md rounded-lg p-6 hover:bg-[#F1F3F5] transition">
-                <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-lg mb-4" />
-                <h3 className="text-xl font-semibold">{product.name}</h3>
-                <p className="text-[#6C757D] mt-2">${product.price}/day</p>
-                <a href={`/product/${product.id}`} className="mt-4 inline-block bg-[#004AAD] text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-[#002D73] transition">
-                  View Details
-                </a>
-              </div>
-            ))}
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {sortedDeals.map((deal) => (
+            <div key={deal.id} className='bg-white shadow-md rounded-lg p-6 hover:bg-[#F1F3F5] transition'>
+              <Image src={deal.image} alt={deal.name} width={400} height={250} className='w-full h-48 object-cover rounded-lg mb-4' />
+              <h3 className='text-xl font-semibold'>{deal.name}</h3>
+              <p className='text-[#6C757D] mt-2'>${deal.price}/day</p>
+              <a href={`/deals/${deal.id}`} className='mt-4 inline-block bg-[#004AAD] text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-[#002D73] transition'>
+                View Deal
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default Shop;
+export default Deals;

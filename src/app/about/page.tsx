@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const About = () => {
   return (
     <div className="bg-[#F8F9FA] text-[#212529] mt-48 sm:mt-20">
@@ -66,7 +64,9 @@ const About = () => {
               { name: "Omar L.", review: "Loved the transparency and the quick booking process. Highly recommend Qversity!" },
             ].map((item, index) => (
               <div key={index} className="bg-white shadow-md rounded-lg p-6">
-                <p className="text-[#212529] italic">"{item.review}"</p>
+                <p className="text-[#212529] italic">
+                  &ldquo;{item.review}&rdquo;
+                </p>
                 <p className="mt-4 font-semibold text-[#FF6B00]">- {item.name}</p>
               </div>
             ))}
@@ -78,7 +78,10 @@ const About = () => {
       <section className="bg-[#004AAD] text-white py-16 text-center">
         <h2 className="text-3xl font-bold">Ready to Hit the Road?</h2>
         <p className="text-lg mt-2">Find your perfect car today and experience the Qversity difference!</p>
-        <a href="/book" className="mt-6 inline-block bg-[#FF6B00] text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-[#D95A00] transition">
+        <a
+          href="/book"
+          className="mt-6 inline-block bg-[#FF6B00] text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-[#D95A00] transition"
+        >
           Book Your Car Now
         </a>
       </section>
