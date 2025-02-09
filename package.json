@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+  
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.475.0",
     "next": "15.1.6",
+    "next-sanity": "^9.8.54",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.1",
     "react-icons": "^5.4.0",
+    "react-is": "^19.0.0",
     "react-multi-carousel": "^2.8.5",
-    "styled-components": "^6.1.14"
+    "styled-components": "^6.1.15",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

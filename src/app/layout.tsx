@@ -37,7 +37,7 @@ export default function RootLayout({
       >
         <Navbar />
       {/*  <div className="mt-48 lg:mt-32"> </div> Adjust based on the height of the navbar */}
-      
+     
         {children}
 <Footer />
       </body>
