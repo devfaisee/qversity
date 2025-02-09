@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
             <section>
               <h3 className="text-2xl font-semibold">Introduction</h3>
               <p className="mt-4 text-[#6C757D]">
-                Welcome to Qversity. These Terms and Conditions outline the rules and regulations for the use of Qversity's website and services. By accessing this website, we assume you accept these terms and conditions. Do not continue to use Qversity if you do not agree to all of the terms and conditions stated on this page.
+                Welcome to Qversity. These Terms and Conditions outline the rules and regulations for the use of Qversity&rsquo;s website and services. By accessing this website, we assume you accept these terms and conditions. Do not continue to use Qversity if you do not agree to all of the terms and conditions stated on this page.
               </p>
             </section>
             <section>
@@ -55,7 +55,6 @@ const TermsAndConditions = () => {
         </div>
       </div>
     );
-  };
-  
-  export default TermsAndConditions;
-  
+};
+
+export default TermsAndConditions;

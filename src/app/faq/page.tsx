@@ -3,13 +3,10 @@ import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const FAQ = () => {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<number | null>(null); // ✅ Fix: Explicitly define type
 
   const toggle = (i: number) => {
-    if (selected === i) {
-      return setSelected(null);
-    }
-    setSelected(i);
+    setSelected(selected === i ? null : i);
   };
 
   const faqs = [
