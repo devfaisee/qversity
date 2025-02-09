@@ -8,29 +8,10 @@ import Link from "next/link";
 import logo from "../../public/qversity_logo.png";
 
 
-// Define type for cart items
-type CartItem = {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  quantity: number;
-};
 
-const Navbar = () => {
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
-  const [cartItems, setCartItems] = useState<CartItem[]>([]); // ✅ Type added
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      console.log("Searching for:", searchQuery);
-    }
-  };
 
-  const toggleCart = () => setIsCartOpen(!isCartOpen);
-
+  
   return (
     <>
       <nav
